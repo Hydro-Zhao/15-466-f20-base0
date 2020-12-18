@@ -51,6 +51,8 @@ Setup for your development environment should be relatively simple:
 	- MacOS: https://github.com/15-466/nest-libs/releases/download/v0.4/nest-libs-macos-v0.4.tar.gz
 	- Windows: https://github.com/15-466/nest-libs/releases/download/v0.4/nest-libs-windows-v0.4.zip
 
+the nest-libs mainly has SDL2, libpng, glm, opusfile and opustools. Another words, I can learn from this on how to use third-party static link library in c. There are mainly three folders needed, dist, which include the licence of that library, include and lib.
+
 Once you are finished, your directory tree should looks something like this:
 
 ```

@@ -23,12 +23,15 @@ struct PongMode : Mode {
 
 	//----- game state -----
 
-	glm::vec2 court_radius = glm::vec2(7.0f, 5.0f);
+	glm::vec2 door_radius = glm::vec2(0.5f, 1.0f);
+	float player_x = 1.5f; // relative length to right paddle
+
+	glm::vec2 court_radius = glm::vec2(7.0f - door_radius.x*2, 5.0f);
 	glm::vec2 paddle_radius = glm::vec2(0.2f, 1.0f);
 	glm::vec2 ball_radius = glm::vec2(0.2f, 0.2f);
 
-	glm::vec2 left_paddle = glm::vec2(-court_radius.x + 0.5f, 0.0f);
-	glm::vec2 right_paddle = glm::vec2( court_radius.x - 0.5f, 0.0f);
+	glm::vec2 left_paddle = glm::vec2(-court_radius.x + door_radius.x*2 + player_x + 0.5f, 0.0f);
+	glm::vec2 right_paddle = glm::vec2( court_radius.x - door_radius.x*2 - player_x - 0.5f, 0.0f);
 
 	glm::vec2 ball = glm::vec2(0.0f, 0.0f);
 	glm::vec2 ball_velocity = glm::vec2(-1.0f, 0.0f);
